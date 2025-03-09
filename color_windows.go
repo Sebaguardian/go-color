@@ -35,6 +35,15 @@ func init() {
 			CyanBackground = ""
 			GrayBackground = ""
 			WhiteBackground = ""
+			BlackDim = ""
+			RedDim = ""
+			GreenDim = ""
+			YellowDim = ""
+			BlueDim = ""
+			PurpleDim = ""
+			CyanDim = ""
+			GrayDim = ""
+			WhiteDim = ""
 		}
 	}
 }

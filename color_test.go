@@ -45,6 +45,15 @@ func TestColorize(t *testing.T) {
 		{Color: CyanBackground, ExpectedOutput: "\033[46mtest\033[0m"},
 		{Color: GrayBackground, ExpectedOutput: "\033[47mtest\033[0m"},
 		{Color: WhiteBackground, ExpectedOutput: "\033[107mtest\033[0m"},
+		{Color: BlackDim, ExpectedOutput: "\033[2;30mtest\033[0m"},
+		{Color: RedDim, ExpectedOutput: "\033[2;31mtest\033[0m"},
+		{Color: GreenDim, ExpectedOutput: "\033[2;32mtest\033[0m"},
+		{Color: YellowDim, ExpectedOutput: "\033[2;33mtest\033[0m"},
+		{Color: BlueDim, ExpectedOutput: "\033[2;34mtest\033[0m"},
+		{Color: PurpleDim, ExpectedOutput: "\033[2;35mtest\033[0m"},
+		{Color: CyanDim, ExpectedOutput: "\033[2;36mtest\033[0m"},
+		{Color: GrayDim, ExpectedOutput: "\033[2;37mtest\033[0m"},
+		{Color: WhiteDim, ExpectedOutput: "\033[2;97mtest\033[0m"},
 	}
 	for _, scenario := range scenarios {
 		t.Run(scenario.Color, func(t *testing.T) {
@@ -173,6 +182,15 @@ func TestIn(t *testing.T) {
 		{Name: "white-over-cyan", Func: InWhiteOverCyan, ExpectedOutput: "\033[97m\033[46mtest\033[0m"},
 		{Name: "white-over-gray", Func: InWhiteOverGray, ExpectedOutput: "\033[97m\033[47mtest\033[0m"},
 		{Name: "white-over-white", Func: InWhiteOverWhite, ExpectedOutput: "\033[97m\033[107mtest\033[0m"},
+		{Name: "blackdim", Func: InBlackDim, ExpectedOutput: "\033[4mtest\033[0m"},
+		{Name: "reddim", Func: InRedDim, ExpectedOutput: "\033[2;31mtest\033[0m"},
+		{Name: "greendim", Func: InGreenDim, ExpectedOutput: "\033[2;32mtest\033[0m"},
+		{Name: "yellowdim", Func: InYellowDim, ExpectedOutput: "\033[2;33mtest\033[0m"},
+		{Name: "bluedim", Func: InBlueDim, ExpectedOutput: "\033[2;34mtest\033[0m"},
+		{Name: "purpledim", Func: InPurpleDim, ExpectedOutput: "\033[2;35mtest\033[0m"},
+		{Name: "cyandim", Func: InCyanDim, ExpectedOutput: "\033[2;36mtest\033[0m"},
+		{Name: "graydim", Func: InGrayDim, ExpectedOutput: "\033[2;37mtest\033[0m"},
+		{Name: "whitedim", Func: InWhiteDim, ExpectedOutput: "\033[2;97mtest\033[0m"},
 	}
 	for _, scenario := range scenarios {
 		t.Run(scenario.Name, func(t *testing.T) {

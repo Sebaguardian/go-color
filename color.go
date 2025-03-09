@@ -39,6 +39,20 @@ var (
 	CyanBackground   = "\033[46m"
 	GrayBackground   = "\033[47m"
 	WhiteBackground  = "\033[107m"
+
+	////////////////////
+	// Dimmed colors  //
+	////////////////////
+
+	BlackDim = "\033[2;30m"
+	RedDim = "\033[2;31m"
+	GreenDim = "\033[2;32m"
+	YellowDim = "\033[2;33m"
+	BlueDim = "\033[2;34m"
+	PurpleDim = "\033[2;35m"
+	CyanDim = "\033[2;36m"
+	GrayDim = "\033[2;37m"
+	WhiteDim = "\033[2;97m"
 )
 
 var (
@@ -269,6 +283,87 @@ func OverGray(s any) string {
 //	println(color.OverWhite("This is over white"))
 func OverWhite(s any) string {
 	return Colorize(WhiteBackground, s)
+}
+
+// InBlackDim wraps the given string s in Dimmed Black
+//
+// Example:
+//
+//	println(color.InBlackDim("This is Dimmed black"))
+func InBlackDim(s any) string {
+	return Colorize(BlackDim, s)
+}
+
+// InRedDim wraps the given string s in Dimmed Red
+//
+// Example:
+//
+//	println(color.InRedDim("This is Dimmed red"))
+func InRedDim(s any) string {
+	return Colorize(RedDim, s)
+}
+
+// InGreenDim wraps the given string s in Dimmed Green
+//
+// Example:
+//
+//	println(color.InGreenDim("This is Dimmed green"))
+func InGreenDim(s any) string {
+	return Colorize(GreenDim, s)
+}
+
+// InYellowDim wraps the given string s in Dimmed Yellow
+//
+// Example:
+//
+//	println(color.InYellowDim("This is Dimmed yellow"))
+func InYellowDim(s any) string {
+	return Colorize(YellowDim, s)
+}
+
+// InBlueDim wraps the given string s in Dimmed Blue
+//
+// Example:
+//
+//	println(color.InBlueDim("This is Dimmed blue"))
+func InBlueDim(s any) string {
+	return Colorize(BlueDim, s)
+}
+
+// InPurpleDim wraps the given string s in Dimmed Purple
+//
+// Example:
+//
+//	println(color.InPurpleDim("This is Dimmed purple"))
+func InPurpleDim(s any) string {
+	return Colorize(PurpleDim, s)
+}
+
+// InCyanDim wraps the given string s in Dimmed Cyan
+//
+// Example:
+//
+//	println(color.InCyanDim("This is Dimmed cyan"))
+func InCyanDim(s any) string {
+	return Colorize(CyanDim, s)
+}
+
+// InGrayDim wraps the given string s in Dimmed Gray
+//
+// Example:
+//
+//	println(color.InGrayDim("This is Dimmed gray"))
+func InGrayDim(s any) string {
+	return Colorize(GrayDim, s)
+}
+
+// InWhiteDim wraps the given string s in Dimmed White
+//
+// Example:
+//
+//	println(color.InWhiteDim("This is Dimmed white"))
+func InWhiteDim(s any) string {
+	return Colorize(WhiteDim, s)
 }
 
 func InBlackOverBlack(s any) string   { return Colorize(Black+BlackBackground, s) }
